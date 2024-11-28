@@ -31,11 +31,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($category as $row)
+                                @foreach($categories as $category)
                                 <tr>
-                                    <td>{{$row['Name']}}</td>
-                                    <td>{{$row['Name']}}</td>
-                                    <td>{{$row['Name']}}</td>
+                                    <td>{{$category['Name']}}</td>
+                                    <td>
+                                        <a href="{{url('admin/category/'.$category->Id.'/edit')}}">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a href="{{url('admin/category/'.$category->Id.'/delete')}}">Delete</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

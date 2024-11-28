@@ -35,10 +35,10 @@
                                 <!-- Data rows -->
                                 @foreach($clients as $client)
                                     <tr>
-                                        <td>{{$client->name}}</td>
-                                        <td>{{$client->username}}</td>
-                                        <td>{{$client->email}}</td>
-                                        <td>{{$client->password}}</td>
+                                        <td>{{$client->Name}}</td>
+                                        <td>{{$client->Username}}</td>
+                                        <td>{{$client->Email}}</td>
+                                        <td>{{$client->Password}}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

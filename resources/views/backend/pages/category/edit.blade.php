@@ -29,19 +29,20 @@
 
                             <div class="mt-5 tab-content">
                                 <div class="block tab-pane" data-tab-id="1" id="accountInfo">
-                                    <form action="#!">
-                                        
+                                    <form action="{{url('admin/category/'.$category->Id)}}" method="POST">
+                                        @csrf
+                                        @method('PUT')
                                         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                                             <div>
                                                 <label for="nameInput" class="inline-block mb-2 text-base font-medium">Name <span class="text-red-500">*</span></label>
-                                                <input type="text" id="nameInput" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter your name" required>
+                                                <input type="text" name="Name" id="Name" value="{{$category->Name}}" class="form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Enter your name" required>
+                                            </div>
+                                            <div class="flex justify-between gap-2 mt-5">
+                                                <button type="submit" data-action="next" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20"><span class="align-middle">Next</span> <i data-lucide="move-right" class="inline-block h-4 ml-1"></i></button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
-                            </div>
-                            <div class="flex justify-between gap-2 mt-5">
-                                <button type="button" data-action="next" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20"><span class="align-middle">Next</span> <i data-lucide="move-right" class="inline-block h-4 ml-1"></i></button>
                             </div>
                         </div>
                     </div><!--end card-->

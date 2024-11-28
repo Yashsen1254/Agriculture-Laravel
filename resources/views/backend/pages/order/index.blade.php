@@ -25,16 +25,19 @@
                         <table id="hoverableTable" class="hover group" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Total Quantity</th>
+                                    <th>Status</th>
+                                    <th>Cart</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                @foreach($orders as $order)
+                                    <tr>
+                                        <td>{{$order->Totalquantity}}</td>
+                                        <td>{{$order->Status}}</td>
+                                        <td>{{$order->Cartid}}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

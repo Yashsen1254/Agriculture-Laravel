@@ -14,23 +14,19 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $client = Client::where('Email', $request->Email)->where('Password', $request->Password)->first();
+        $client = Client::where('Email', $request->Email)->where('Password', $request->Password)->first();  // get use karna hai
 
         if ($client) {
-            session(['Clientid' => $client->Id]);
-            return "Login successful!";
+            session(['Clientid' => $client->Id]);            
+            return redirect()->route('front.index')->with('success', 'Login successful!');
         }
-
-        return "Invalid email or password.";
-
-        return redirect()->route('front.index')->with('success', 'Admin created successfully');
     }
 
     // Logout Function
     public function logout()
     {
         session()->flush();
-        return "Logout successful!";
+        return redirect()->route('front.index')->with('success', 'Login successful!');
     }
 
 }

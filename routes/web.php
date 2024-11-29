@@ -7,11 +7,22 @@ use App\Http\Controllers\Backend\CheckoutController;
 use App\Http\Controllers\Backend\ClientController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\PaymentController;
+use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\CartController as FrontendCartController;
+use App\Http\Controllers\Frontend\CheckoutController as FrontendCheckoutController;
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\ShopController;
 use Illuminate\Support\Facades\Route;
 
 //frontend routes
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index']);
+Route::get('/cart', [FrontendCartController::class, 'index']);
+Route::get('/checkout', [FrontendCheckoutController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/shop', [ShopController::class, 'index']);
+
 
 //backend routes
 

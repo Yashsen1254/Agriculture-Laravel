@@ -47,7 +47,8 @@
 			<div class="grid">
 				<div class="grid_row">
 					<div class="grid_col is-12 is-lg-6">
-						<form>
+						<form action="{{url('/login/store')}}" method="POST">
+							@csrf
 							<div class="grid">
 								<div class="grid_row is-30 is-md-40">
 									<div class="grid_col is-12">
@@ -55,11 +56,11 @@
 									</div>
 									<div class="grid_col is-12">
 										<label class="form_label">Email address <span class="form_label_require">*</span></label>
-										<input class="form_control_input" type="text" name="email" placeholder="Enter your email ..." required>
+										<input class="form_control_input" type="text" name="Email" id="Email" placeholder="Enter your email ..." required>
 									</div>
 									<div class="grid_col is-12">
 										<label class="form_label">Password <span class="form_label_require">*</span></label>
-										<input class="form_control_input" type="password" name="password" placeholder="Enter your password ..." required>
+										<input class="form_control_input" type="password" name="Password" id="Password" placeholder="Enter your password ..." required>
 									</div>
 									<div class="grid_col is-12">
 										<div class="grid">

@@ -49,11 +49,23 @@
 						<div class="shop-single_description">
 							<p>{{$products->Description}}</p>
 						</div>
-						<form class="shop-single_quantity">
-							<input type="text" name="quantity" value="1" data-ntr-ui-spinner='{"min":1, "max":50}'>
-							<button class="button is-grey" type="submit">
-								<span class="button_text">Add to Cart</span>
-							</button>
+						<form class="shop-single_quantity" method="POST" action="{{url('/cart/store')}}">
+							@csrf
+							<input type="hidden" name="Productid" id="Productid" value="{{ $products->Id }}">
+							<div class="quantity-wrapper">
+								<input type="number" name="Quantity" id="Quantity" value="1" min="1" max="50" class="quantity-input">
+								@if(Session::has('Clientid'))
+									<button type="submit" class="button is-grey">
+										<span class="button_text">Add to Cart</span>
+										<span class="button_icon icon is-cart"></span>
+									</button>
+								@else
+									<a href="{{ route('front.register') }}" class="button is-grey">
+										<span class="button_text">Add To Cart</span>
+										<span class="button_icon icon is-cart"></span>
+									</a>
+								@endif
+							</div>
 						</form>
 					</div>
 				</div>

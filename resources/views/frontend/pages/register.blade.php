@@ -82,7 +82,7 @@
 													</button>
 												</div>
 												<div class="grid_col is-12 is-sm-6">
-													<a class="button is-block is-grey" href="login-1.html">
+													<a class="button is-block is-grey" href="/login">
 														<span class="button_text">Login</span>
 														<span class="button_icon icon is-next"></span>
 													</a>

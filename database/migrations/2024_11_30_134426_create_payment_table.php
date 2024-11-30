@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('payment', function (Blueprint $table) {
             $table->id('Id');
-            $table->string('Received');
             $table->unsignedBigInteger('Orderid');
             $table->foreign('Orderid')->references('Id')->on('order');
             $table->timestamps();

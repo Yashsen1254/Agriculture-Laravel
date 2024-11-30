@@ -26,16 +26,20 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Status</th>
+                                    <th>Total Payment</th>
                                     <th>Delivered</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($payments as $payment)
                                     <tr>
-                                        <td>{{$payment->id}}</td>
-                                        <td>{{$payment->id}}</td>
-                                        <td>{{$payment->id}}</td>
+                                        <td>
+                                                                                        
+                                        </td>
+                                        <td>
+                                            {{}}
+                                        </td>
+                                        <td>Delivered</td>
                                     </tr>
                                 @endforeach
                             </tbody>

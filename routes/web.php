@@ -5,26 +5,49 @@ use App\Http\Controllers\Backend\CartController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CheckoutController;
 use App\Http\Controllers\Backend\ClientController;
+use App\Http\Controllers\Backend\IndexController as BackendIndexController;
+use App\Http\Controllers\backend\LoginController as BackendLoginController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\PaymentController;
+use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\backend\RegisterController as BackendRegisterController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\CartController as FrontendCartController;
 use App\Http\Controllers\Frontend\CheckoutController as FrontendCheckoutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\frontend\LoginController;
+use App\Http\Controllers\frontend\RegisterController;
 use App\Http\Controllers\Frontend\ShopController;
 use Illuminate\Support\Facades\Route;
 
 //frontend routes
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/', [IndexController::class, 'index'])->name('front.index');
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/cart', [FrontendCartController::class, 'index']);
+Route::post('/cart/store', [FrontendCartController::class, 'addToCart']);
+Route::get('/cart/delete/{id}', [FrontendCartController::class, 'delete']);
 Route::get('/checkout', [FrontendCheckoutController::class, 'index']);
+Route::post('/checkout/store', [FrontendCheckoutController::class, 'store']);
 Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/shop', [ShopController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('front.login');
+Route::post('/login/store', [LoginController::class, 'login']);
+Route::get('/register', [RegisterController::class, 'index'])->name('front.register');
+Route::post('/register/store', [RegisterController::class, 'store']);
+Route::get('/singleproduct/{id}', [ShopController::class, 'show']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
 
 //backend routes
+
+//index routes
+Route::get('/admin', [BackendIndexController::class, 'index'])->name('index');
+
+//login and register routes
+Route::get('/admin/login', [BackendLoginController::class, 'index']);
+Route::get('/admin/register', [BackendRegisterController::class, 'index']);
+
 
 //admin routes
 Route::get('/admin/admin', [AdminController::class, 'index'])->name('admin.index');
@@ -42,14 +65,26 @@ Route::get('/admin/category/{id}/edit', [CategoryController::class, 'edit'])->na
 Route::put('/admin/category/{id}', [CategoryController::class, 'update'])->name('category.update'); 
 Route::get('/admin/category/{id}/delete', [CategoryController::class, 'delete'])->name('category.delete');
 
+//products routes
+Route::get('/admin/product', [ProductController::class, 'index'])->name('product.index');
+Route::get('/admin/product/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('/admin/product/store', [ProductController::class, 'store'])->name('product.store');
+Route::get('/admin/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
+Route::put('/admin/product/{id}', [ProductController::class, 'update'])->name('product.update'); 
+Route::get('/admin/product/{id}/delete', [ProductController::class, 'delete'])->name('product.delete');
 
 //checkout routes
 Route::get('/admin/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+
 //client routes
 Route::get('/admin/client', [ClientController::class, 'index'])->name('client.index');
+
 //cart routes
 Route::get('/admin/cart', [CartController::class, 'index'])->name('cart.index');
+
 //order routes
 Route::get('/admin/order', [OrderController::class, 'index'])->name('order.index');
+Route::get('/admin/order/{id}', [OrderController::class, 'update'])->name('order.update');
+
 //payment routes
 Route::get('/admin/payment', [PaymentController::class, 'index'])->name('payment.index');

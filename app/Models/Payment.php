@@ -8,6 +8,6 @@ class Payment extends Model
 {
     protected $table = 'payment';
     protected $fillable = [
-        'Received', 'Orderid',
+        'Orderid',
     ];
 }

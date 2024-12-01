@@ -34,7 +34,7 @@
                                 @foreach($payments as $payment)
                                     <tr>
                                         <td>
-                                                                                        
+                                            
                                         </td>
                                         <td>
                                             {{}}

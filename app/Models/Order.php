@@ -8,6 +8,6 @@ class Order extends Model
 {
     protected $table = 'order';
     protected $fillable = [
-        'Totalquantity', 'Status', 'Cartid'
+        'Totalquantity', 'Totalamount', 'Status', 'Cartid'
     ];
 }

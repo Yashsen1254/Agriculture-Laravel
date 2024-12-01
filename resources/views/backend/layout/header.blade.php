@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{url('backend/assets/css/tailwind2.css')}}">
 </head>
 
-@if(!session()->has('user'))
-    <?php redirect('/admin/login'); ?>
+@if(!session()->has('Adminid'))
+    <script>
+        window.location.href = "{{ route('admin.login') }}";
+    </script>
 @endif

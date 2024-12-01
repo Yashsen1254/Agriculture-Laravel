@@ -25,23 +25,27 @@
                         <table id="hoverableTable" class="hover group" style="width:100%">
                             <thead>
                                 <tr>
+                                    <th>Client Name</th>
                                     <th>Total Quantity</th>
+                                    <th>Total Amount</th>
                                     <th>Status</th>
                                     <th>Cart</th>
-                                    <th>Client Name</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($orders as $order)
-                                    <tr>
+                                <tr>
+                                        <td>
+                                            
+                                        </td>
                                         <input type="hidden" value="{{$order->Id}}" id="Orderid" name="Orderid">
                                         <td>{{$order->Totalquantity}}</td>
+                                        <td>{{$order->Totalamount}}</td>
                                         <td>
                                             <a href="{{url('/admin/order/'.$order->Id)}}">{{$order->Status}}</a>
                                         </td>
-                                        <td>{{$order->Cartid}}</td>
                                         <td>
-                                            
+                                            {{$order->Cartid}}
                                         </td>
                                     </tr>
                                 @endforeach

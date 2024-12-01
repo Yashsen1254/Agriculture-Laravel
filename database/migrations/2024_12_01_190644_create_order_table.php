@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('order', function (Blueprint $table) {
             $table->id('Id');
             $table->integer('Totalquantity');
+            $table->integer('Totalamount');
             $table->string('Status');
             $table->unsignedBigInteger('Cartid');
             $table->foreign('Cartid')->references('Id')->on('Cart');

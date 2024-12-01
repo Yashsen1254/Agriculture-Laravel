@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('Productid');
             $table->foreign('Productid')->references('Id')->on('product');
             $table->integer('Quantity');
+            $table->boolean('isdeleted')->default(0);
             $table->timestamps();
         });
     }

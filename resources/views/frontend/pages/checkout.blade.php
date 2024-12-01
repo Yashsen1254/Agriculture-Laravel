@@ -141,6 +141,7 @@
 											<td>Total</td>
 											<td class="text-right text-secondary">
 												{{ $products->sum('Price') * $carts->sum('Quantity') }}
+											<input type="hidden" name="Totalamount" value="{{ $products->sum('Price') * $carts->sum('Quantity') }}">
 											</td>
 										</tr>
 									</tfoot>

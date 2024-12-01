@@ -30,8 +30,13 @@ class CheckoutController extends Controller
 
         $order = Order::create([
             'Totalquantity' => $request->Totalquantity,
+            'Totalamount' => $request->Totalamount,
             'Status' => $request->Status,
             'Cartid' => $request->Cartid,
+        ]);
+
+        Cart::where('Id', $request->Cartid)->update([
+            'isdeleted' => 1,
         ]);
         return redirect('/');
     }

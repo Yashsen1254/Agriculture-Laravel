@@ -43,7 +43,7 @@
 						<tbody>							
 							
 							@foreach($carts as $cart)
-								@if($cart->Clientid == session('Clientid'))								
+								@if($cart->Clientid == session('Clientid') && $cart->isdeleted != 1)								
 								<tr>
 									<td class="is-photo">
 										<a href="/singleproduct/{{$cart->Productid}}">
@@ -80,7 +80,7 @@
 							</tr>
 							<tr>
 								<td>Total :</td>
-								<td class="text-primary">${{ $carts->where('Clientid', session('Clientid'))->sum(function($cart) { return $cart->Price * $cart->Quantity; }) }}</td>
+								<td class="text-primary">${{ $carts->reject(function($cart) { return $cart->isdeleted == 1; })->sum(function($cart) { return $cart->Price * $cart->Quantity; }) }}</td>
 							</tr>
 							<tr>
 								<td colspan="2">

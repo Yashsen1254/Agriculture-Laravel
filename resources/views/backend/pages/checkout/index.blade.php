@@ -39,7 +39,9 @@
                                     <td>{{ $checkout->Mobile }}</td>
                                     <td>{{ $checkout->Email }}</td>
                                     <td>{{ $checkout->Address }}</td>
-                                    <td>{{ $checkout->Cartid }}</td>
+                                    <td>
+                                        {{$checkout->Cartid->clientid->name}}
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

@@ -7,10 +7,9 @@
                     <div class="grid_col is-12 is-lg-6 is-xl-4">
                         <div class="footer_about">
                             <div class="footer_about_logo">
-                                <img src="assets/img/logo.png" alt="Naturally">
+                                <img src="{{url('frontend/assets/img/logo.png')}}" alt="Naturally">
                             </div>
                             <div class="footer_about_text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nisi ac turpis laoreet auctor sed sed turpis.</p>
                             </div>
                         </div>
                         <div class="footer_contact">
@@ -46,23 +45,6 @@
                                 <a class="social-icons_link" href="#" target="_blank"><span class="icon is-youtube"></span></a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <div class="grid">
-                <div class="grid_row is-40 is-lg-60">
-                    <div class="grid_col is-12 is-lg-col">
-                        <div class="footer_copyright">Copyright © 2019 Naturally.com. All rights reserved.</div>
-                    </div>
-                    <div class="grid_col is-12 is-lg-auto">
-                        <nav class="footer_menu">
-                            <ul class="footer_menu_items">
-                                <li class="footer_menu_item"><a class="footer_menu_link" href="#">Privacy Policy</a></li>
-                                <li class="footer_menu_item"><a class="footer_menu_link" href="#">Terms of Use</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

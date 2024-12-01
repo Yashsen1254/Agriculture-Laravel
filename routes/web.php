@@ -45,7 +45,9 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/admin', [BackendIndexController::class, 'index'])->name('index');
 
 //login and register routes
-Route::get('/admin/login', [BackendLoginController::class, 'index']);
+Route::get('/admin/login', [BackendLoginController::class, 'index'])->name('admin.login');
+Route::post('/admin/login/store', [BackendLoginController::class, 'login']);
+Route::get('/admin/logout', [BackendLoginController::class, 'logout'])->name('admin.logout');
 Route::get('/admin/register', [BackendRegisterController::class, 'index']);
 
 

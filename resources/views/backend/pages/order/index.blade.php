@@ -29,14 +29,14 @@
                                     <th>Total Quantity</th>
                                     <th>Total Amount</th>
                                     <th>Status</th>
-                                    <th>Cart</th>
+                                    <th>Product</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($orders as $order)
                                 <tr>
                                         <td>
-                                            
+                                            {{$order->ClientName}}
                                         </td>
                                         <input type="hidden" value="{{$order->Id}}" id="Orderid" name="Orderid">
                                         <td>{{$order->Totalquantity}}</td>
@@ -45,20 +45,10 @@
                                             <a href="{{url('/admin/order/'.$order->Id)}}">{{$order->Status}}</a>
                                         </td>
                                         <td>
-                                            {{$order->Cartid}}
+                                            {{$order->ProductName}}
                                         </td>
                                     </tr>
                                 @endforeach
-                                {{-- @foreach($orders as $order)
-                                    <tr>
-                                        <input type="hidden" value="{{$order->Id}}" id="Orderid" name="Orderid">
-                                        <td>{{$order->Totalquantity}}</td>
-                                        <td>
-                                            <a href="{{url('/admin/order/'.$order->Id)}}">{{$order->Status}}</a>
-                                        </td>
-                                        <td>{{$order->Cartid}}</td>
-                                    </tr>
-                                @endforeach --}}
                             </tbody>
                         </table>
                     </div>

@@ -10,7 +10,11 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function index() {
-        $orders = Order::get();
+        $orders = Order::join('Cart', 'Order.Cartid', '=', 'Cart.Id')
+                        ->join('Client', 'Cart.Clientid', '=', 'Client.Id')
+                        ->join('Product', 'Cart.Productid', '=', 'Product.Id')
+                        ->select('Order.*', 'Client.Name as ClientName', 'Product.Name as ProductName')
+                        ->get();
         return view('backend.pages.order.index', compact('orders'));
     }
     

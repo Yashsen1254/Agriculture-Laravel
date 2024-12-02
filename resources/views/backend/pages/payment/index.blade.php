@@ -34,10 +34,10 @@
                                 @foreach($payments as $payment)
                                     <tr>
                                         <td>
-                                            
+                                            {{$payment->ClientName}}
                                         </td>
                                         <td>
-                                            {{}}
+                                            {{$payment->Totalamount}}
                                         </td>
                                         <td>Delivered</td>
                                     </tr>

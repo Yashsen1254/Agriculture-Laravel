@@ -14,13 +14,14 @@
                                 <h5 class="text-16">Admin</h5>
                             </div>
                             <ul class="flex items-center gap-2 text-sm font-normal shrink-0">
-                                <li
+                                {{-- <li
                                     class="relative before:content-['\ea54'] before:font-remix ltr:before:-right-1 rtl:before:-left-1  before:absolute before:text-[18px] before:-top-[3px] ltr:pr-4 rtl:pl-4 before:text-slate-400 dark:text-zink-200">
                                     <a href="#!" class="text-slate-400 dark:text-zink-200">Admin</a>
                                 </li>
                                 <li class="text-slate-700 dark:text-zink-100">
                                     Admin
-                                </li>
+                                </li> --}}
+                                <a href="/admin/admin/create" class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">Add Admin</a>
                             </ul>
                         </div>
                         <div class="card">

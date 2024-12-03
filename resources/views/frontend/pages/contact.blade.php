@@ -8,12 +8,11 @@
 			<!-- Headline -->
 			<div class="headline">
 				<h1 class="headline_title">Contact us</h1>
-				<p class="headline_summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>
 			<!-- Headline End -->
 			<!-- Breadcrumb -->
 			<div class="breadcrumb">
-				<a class="breadcrumb_link" href="home-1.html">
+				<a class="breadcrumb_link" href="/">
 					<span class="breadcrumb_link_text">Home</span>
 					<span class="breadcrumb_link_icon icon is-arrow-right2"></span>
 				</a>
@@ -33,7 +32,6 @@
 							<div class="grid_row is-60 is-lg-30">
 								<div class="grid_col is-12">
 									<h3 class="lg-mt-60 mb-0 text-secondary">Contact Information</h3>
-									<p>Lorem ipsum dolor sit amet consectetur.</p>
 								</div>
 								<div class="grid_col is-12 is-sm-6">
 									<h4>Address</h4>
@@ -53,7 +51,6 @@
 								</div>
 								<div class="grid_col is-12">
 									<h3 class="mb-0 text-secondary">Follow us</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 								</div>
 								<div class="grid_col is-12">
 									<div class="social-icons">
@@ -65,50 +62,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="grid_col is-12 is-lg-6" data-aos="ntr-fade-up" data-aos-once="true" data-aos-delay="200">
-						<!-- Contact Form 2 -->
-						<div class="contact-form2">
-							<div class="contact-form2_heading">
-								<h3>Contact Form</h3>
-								<p>Lorem ipsum dolor sit amet consectetur.</p>
-							</div>
-							<div class="contact-form2_body">
-								<form data-ntr-contact-form>
-									<div class="grid">
-										<div class="grid_row is-30">
-											<div class="grid_col is-12 hidden" id="form-message">
-												<!-- Alert -->
-												<div class="alert" data-ntr-alert>
-													<button class="alert_close" type="button">
-														<span class="icon is-close"></span>
-													</button>
-												</div>
-												<!-- Alert End -->
-											</div>
-											<div class="grid_col is-12">
-												<label class="form_label">Name Surname <span class="form_label_require">*</span></label>
-												<input class="form_control_input" type="text" name="name" placeholder="Enter your name ..." required>
-											</div>
-											<div class="grid_col is-12">
-												<label class="form_label">Email Address <span class="form_label_require">*</span></label>
-												<input class="form_control_input" type="email" name="email" placeholder="Enter your email ..." required>
-											</div>
-											<div class="grid_col is-12">
-												<label class="form_label">Message <span class="form_label_require">*</span></label>
-												<textarea class="form_control_textarea" cols="30" rows="10" name="message" placeholder="Enter your message ..." required></textarea>
-											</div>
-											<div class="grid_col is-12">
-												<button class="button is-block is-grey" type="submit">
-													<span class="button_text">Send Form</span>
-												</button>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						<!-- Contact Form 2 End -->
 					</div>
 				</div>
 			</div>
